@@ -1,0 +1,16 @@
+# IoMonitor
+/IoMonitor/.gradle/
+/IoMonitor/.idea/
+/IoMonitor/.svn/
+/IoMonitor/java_pid5600.hprof   
+/IoMonitor/java_pid8156.hprof 
+/IoMonitor/*.hprof 
+/IoMonitor/*.iml
+
+#app
+/IoMonitor/app/build/
+/IoMonitor/app/*.iml
+
+#iomonitor
+/IoMonitor/iomonitor/build/
+/IoMonitor/iomonitor/*.iml
