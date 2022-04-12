@@ -14,7 +14,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String Path = Environment.getExternalStorageDirectory() + "/logger/"; //文件路径
+    public static final String Path = Environment.getExternalStorageDirectory() + "/dunn/"; //文件路径
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private void leakFile() {
         try {
             //File file = new File("sdcard/a_long.txt");
-            File file = new File(Path+"AK_logger_cache");
+            File file = new File(Path+"screen1.png");
             if (file.exists()) {
                 file.delete();
             }
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     private void writeLong() {
         try {
 //            File file = new File("sdcard/a_long.txt");
-            File file = new File(Path+"AK_logger_cache");
+            File file = new File(Path+"screen1.png");
             if (file.exists()) {
                 file.delete();
             }
@@ -110,12 +110,13 @@ public class MainActivity extends AppCompatActivity {
         long startTime = System.currentTimeMillis();
         try {
 //            File file = new File("sdcard/a_long.txt");
-            File file = new File(Path+"AK_logger_cache");
+            File file = new File(Path+"screen1.png");
             byte[] buf = new byte[400];
+            Log.e("TAG", "file.name -> " + file.getPath());
             FileInputStream fis = new FileInputStream(file);
             int count = 0;
             while ((count = fis.read(buf)) != -1) {
-                // Log.e("TAG", "read -> " + count);
+                Log.e("TAG", "read -> " + count);
             }
             fis.close();
         } catch (Exception e) {
